@@ -1,6 +1,10 @@
 # tag::all[]
 # tag::load[]
-load(":bazel/archive.bzl", "archive")
+# load("@//path/to/package:file.bzl" , "rule_name")
+# load("@//path/to/package:file.bzl" , "rule_name" , "other_rule")
+# load("@//path/to/package:file.bzl" , "rule_name" , aliased_rule="other_rule")
+# load(":bazel/archive.bzl", "archive")
+load("//:bazel/archive.bzl", "archive")
 # end::load[]
 
 # tag::targets[]

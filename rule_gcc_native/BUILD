@@ -1,5 +1,6 @@
 load(":bazel/archive.bzl", "archive")
 
+# Both compilation and linking are done by native cc_binary
 cc_binary(  # <1>
     name="main",
     srcs=[

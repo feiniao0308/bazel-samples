@@ -1,5 +1,7 @@
 # tag::all[]
 # tag::implementation[]
+# context object: https://docs.bazel.build/versions/main/skylark/lib/ctx.html
+# We can use ctx.file.param_name to access single files, or ctx.files.param_name to access lists of files
 def _archive(ctx):  # <1>
   out_file = ctx.actions.declare_file(ctx.attr.out)
   args = ctx.actions.args()

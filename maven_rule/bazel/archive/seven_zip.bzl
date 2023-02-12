@@ -21,13 +21,14 @@ def _seven_zip(ctx):
 # end::rule_implementation[]
 
 # tag::rule_definition[]
+# PAGE - 45
 seven_zip = rule(
   implementation = _seven_zip,
   attrs = {
     "_seven_zip_binary": attr.label(
-        executable=True,  # <1>
-        default=":_seven_zip_binary",  # <2>
-        cfg="host",  # <3>
+        executable=True,  # <1> This label is special, since it points to an executable
+        default=":_seven_zip_binary",  # <2> The target name is the one we defined in the java_binary rule invocation.
+        cfg="host",  # <3> Executables must specify the cfg attribute. This can be either "host" if the executable is part of the build - i.e. a compiler, or "target" if the executable is part of the later runtime, i.e. testing.
     ),
     "version_data": attr.label(  # <4>
         allow_single_file=True,

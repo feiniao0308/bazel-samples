@@ -9,6 +9,10 @@ def _write_jdbc(ctx):
       echo "JDBC is $MY_JDBC_URL"
       echo "$MY_JDBC_URL" > $1
     """,
+    # Note the use of the use_default_shell_env=True . 
+    # Without this flag, the variable won’t be accessible to our action. 
+    # We need to enable it for our action explicitly. This is the first part of getting the variables in: 
+    # telling Bazel this action requires the environment variables injected.
     use_default_shell_env=True,  # <1>
     arguments=[args],
     outputs=[out])

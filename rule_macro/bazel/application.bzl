@@ -3,6 +3,7 @@ load(":bazel/compile.bzl", "compile")
 load(":bazel/link.bzl", "link")
 load(":bazel/archive.bzl", "archive")
 
+# Macros are pure functions that invoke rules.
 def application(name, srcs, hdrs, extra_files):
     compile_target_name = "{}-compile".format(name)
     link_target_name = "{}-link".format(name)

@@ -10,7 +10,7 @@ def _status(ctx):
 
   ctx.actions.run_shell(
     command=""" # <4>
-      echo "Project Status $(cat $1 | grep GIT | cut -f2 -d\ ) built at $(cat $2 | grep CURRENT_TIME | cut -f2 -d\ )." > $3
+      echo "Project Status $(cat $1 | grep GIT | cut -f2 -d' ') built at $(cat $2 | grep CURRENT_TIME | cut -f2 -d' ')." > $3
     """,
     arguments=[args],
     inputs=[ctx.version_file, ctx.info_file],  # <5>

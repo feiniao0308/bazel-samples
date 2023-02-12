@@ -1,5 +1,6 @@
 # tag::all[]
 # tag::targets[]
+# Page - 32
 genrule(
   name="documentation",
   srcs=[
