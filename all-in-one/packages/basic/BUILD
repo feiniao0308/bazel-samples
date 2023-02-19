@@ -6,7 +6,7 @@ archive(
   srcs=[
     "README.md",
   ],
-  # out="documentation.zip",
+  out="documentation.zip",
 )
 
 archive(
@@ -14,7 +14,7 @@ archive(
   srcs=[
     "RELEASE.md",
   ],
-  # out="release.zip",
+  out="release.zip",
 )
 
 archive(
@@ -23,7 +23,7 @@ archive(
     "README.md",
     "RELEASE.md",
   ],
-  # out="all.zip",
+  out="all.zip",
 )
 
 # no load statement for this rule
