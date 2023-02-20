@@ -1,1 +1,2 @@
 build --action_env=MY_JDBC_URL
+build --workspace_status_command=packages/external_data_workspace/status.sh
