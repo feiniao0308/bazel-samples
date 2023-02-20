@@ -1,5 +1,7 @@
 def _status(ctx):
+  print(dir(ctx))
   out = ctx.actions.declare_file(ctx.label.name)
+  print("writing status to {}".format(out))
 
   args = ctx.actions.args()
   args.add(ctx.file.git_commit)
